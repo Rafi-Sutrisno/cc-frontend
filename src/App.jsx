@@ -2,6 +2,7 @@ import React from "react";
 import GetuserObject from "./assets/Get-user/button-get-user";
 import TokenObject from "./assets/Token/showToken";
 import RegisterObject from "./assets/Register/Register";
+import LoginObject from "./assets/Login/Login-test";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
       <div className="flex">
         <h1>Hello World!</h1>
+        <LoginObject />
         <RegisterObject />
         <TokenObject />
         <GetuserObject />

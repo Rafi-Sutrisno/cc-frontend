@@ -1,17 +1,15 @@
 import React from "react";
-import "./register.css";
+import "./login.css";
 
-const registerUser = () => {
-  function handlefetch(name, email, notelp, pass) {
+const LoginUser = () => {
+  function handlefetch(email, pass) {
     const data = {
-      name: name,
       email: email,
-      notelp: notelp,
       pass: pass,
     };
     console.log(data);
     // Configure the fetch request with method, headers, and body
-    fetch("http://localhost:8080/inscure/add", {
+    fetch("http://localhost:8080/inscure/login", {
       method: "POST", // Use POST method to send data
       headers: {
         "Content-Type": "application/json", // Specify content type as JSON
@@ -32,7 +30,7 @@ const registerUser = () => {
       .then(function (data) {
         // Handle data from response
         console.log(data); // Log or process the received data
-        alert("Data submitted successfully!"); // Show success message
+        alert(`Success here is your token : ${data.message}`); // Show success message
       })
       .catch(function (error) {
         // Handle errors
@@ -45,12 +43,10 @@ const registerUser = () => {
     event.preventDefault(); // Prevent default form submission behavior
     const formData = new FormData(event.target); // Get form data
 
-    const name = formData.get("name"); // Get value of "name" input
     const email = formData.get("email"); // Get value of "email" input
-    const notelp = formData.get("notelp"); // Get value of "notelp" input
     const password = formData.get("password"); // Get value of "password" input
 
-    handlefetch(name, email, notelp, password); // Call handleFetch with form input values
+    handlefetch(email, password); // Call handleFetch with form input values
 
     event.target.reset();
   }
@@ -59,9 +55,7 @@ const registerUser = () => {
     <>
       <form action="" onSubmit={handleSubmit} className="form-register">
         <h2>Input your data</h2>
-        <input type="text" name="name" placeholder="name" />
         <input type="text" name="email" placeholder="email" />
-        <input type="text" name="notelp" placeholder="notelp" />
         <input type="text" name="password" placeholder="password" />
         <button type="submit" className="button-register">
           submit
@@ -71,4 +65,4 @@ const registerUser = () => {
   );
 };
 
-export default registerUser;
+export default LoginUser;
