@@ -11,7 +11,7 @@ const LoginUser = () => {
       email: email,
       pass: pass,
     };
-    console.log(data);
+
     // Configure the fetch request with method, headers, and body
     fetch("http://localhost:8080/inscure/login", {
       method: "POST", // Use POST method to send data

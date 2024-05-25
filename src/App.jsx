@@ -1,5 +1,5 @@
 import React from "react";
-import GetuserObject from "./assets/Get-user/button-get-user";
+import GetuserObject from "./assets/get-user-new/getUser";
 import TokenObject from "./assets/Token/showToken";
 import RegisterObject from "./assets/Register/Register";
 import LoginObject from "./assets/Login/Login-test";
