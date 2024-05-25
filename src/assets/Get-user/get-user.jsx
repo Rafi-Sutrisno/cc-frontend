@@ -2,7 +2,8 @@ import React from "react";
 import useSWR from "swr";
 import "./get-user.css";
 
-const token = "token jwt diambil setelah login";
+const token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg4NGEwZWU3LTZmN2EtNGFiMS1hYWQzLWE2YjhlZjgxY2IxNCIsIm5hbWUiOiJmaWx6YSIsImlzcyI6ImFkbWluIiwiZXhwIjoxNzE2NjA4OTc1LCJpYXQiOjE3MTY2MDE3NzV9.MOjbCjGU12vpKhn4SFeAC2SF7LmwXlqhrtbQqK_hTTA";
 
 const fetcher = (url) =>
   fetch(url, {
@@ -28,7 +29,6 @@ const getUser = () => {
 
   if (error) return <div className="failed">failed to load</div>;
   if (isValidating) return <div className="Loading">Loading...</div>;
-  //   console.log(user[0]);
 
   const users = data?.data;
   return (

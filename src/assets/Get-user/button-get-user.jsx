@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Userobject from "./get-user";
 import React from "react";
+import "./get-user.css";
 
-export default function Square() {
+export default function getUser() {
   const [user, setUser] = useState(false);
 
   function handleClick() {
@@ -10,7 +11,9 @@ export default function Square() {
   }
   return (
     <>
-      <button onClick={handleClick}>{user ? "Hide User" : "Get User"}</button>
+      <button onClick={handleClick} className="button">
+        {user ? "Hide User" : "Get User"}
+      </button>
       <div>{user && <Userobject />}</div>
     </>
   );
