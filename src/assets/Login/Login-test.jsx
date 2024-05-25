@@ -1,7 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import "./login.css";
 
 const LoginUser = () => {
+  const [token, setToken] = useState(false);
+  const [bearerToken, setBearerToken] = useState("");
+
   function handlefetch(email, pass) {
     const data = {
       email: email,
@@ -30,7 +34,10 @@ const LoginUser = () => {
       .then(function (data) {
         // Handle data from response
         console.log(data); // Log or process the received data
-        alert(`Success here is your token : ${data.message}`); // Show success message
+        setToken(!token);
+        console.log(data.data);
+        setBearerToken(data.data);
+        // alert(`Success Login`); // Show success message
       })
       .catch(function (error) {
         // Handle errors
@@ -54,13 +61,19 @@ const LoginUser = () => {
   return (
     <>
       <form action="" onSubmit={handleSubmit} className="form-register">
-        <h2>Input your data</h2>
+        <h2>Login Page</h2>
         <input type="text" name="email" placeholder="email" />
         <input type="text" name="password" placeholder="password" />
         <button type="submit" className="button-register">
           submit
         </button>
       </form>
+
+      <div className="token-div">
+        <h2>{token ? "You are logged in" : "Not login yet"}</h2>
+        <h3>{token ? `Here is your token :` : ""}</h3>
+        <p>{token ? `${bearerToken}` : ""}</p>
+      </div>
     </>
   );
 };
