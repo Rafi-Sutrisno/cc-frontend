@@ -1,11 +1,23 @@
-.button {
+.button-register {
   background-color: grey;
   border: none;
+  /* width: 80px; */
 }
 
-.button:hover {
+.button-register:hover {
   background-color: rgb(64, 64, 64);
   transition: all 2s;
   border: none;
   color: rgb(186, 186, 186);
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: lightslategray;
+  border-radius: 10px;
+  padding-bottom: 15px;
 }
