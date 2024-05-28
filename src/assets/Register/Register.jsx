@@ -57,7 +57,7 @@ const registerUser = () => {
 
   return (
     <>
-      <form action="" onSubmit={handleSubmit} className="form-register">
+      <form action="" onSubmit={handleSubmit} className="formRegister">
         <h2>Register Page</h2>
         <input type="text" name="name" placeholder="name" />
         <input type="text" name="email" placeholder="email" />

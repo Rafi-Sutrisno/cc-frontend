@@ -11,7 +11,7 @@
   color: rgb(186, 186, 186);
 }
 
-.form-register {
+.formRegister {
   display: flex;
   flex-direction: column;
   gap: 5px;

@@ -52,7 +52,7 @@ const getUser = () => {
 
   return (
     <>
-      <form action="" onSubmit={handleSubmit} className="form-register">
+      <form action="" onSubmit={handleSubmit} className="formRegister">
         <h2>Get List User Page</h2>
         <input type="text" name="token" placeholder="token" />
         <button type="submit" className="button-register">
