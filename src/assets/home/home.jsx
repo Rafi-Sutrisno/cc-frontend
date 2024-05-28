@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import { useNavigate } from "react-router-dom";
 
-const registerUser = () => {
+const home = () => {
   const navigate = useNavigate();
 
   return (
@@ -25,4 +25,4 @@ const registerUser = () => {
   );
 };
 
-export default registerUser;
+export default home;

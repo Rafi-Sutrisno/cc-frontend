@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Navbar from "../../components/navbar/navbar";
 import "./getUser.css";
 
 const getUser = () => {
@@ -52,6 +53,7 @@ const getUser = () => {
 
   return (
     <>
+      <Navbar />
       <form action="" onSubmit={handleSubmit} className="formRegister">
         <h2>Get List User Page</h2>
         <input type="text" name="token" placeholder="token" />

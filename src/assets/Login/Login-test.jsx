@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Navbar from "../../components/navbar/navbar";
 import "./login.css";
 
 const LoginUser = () => {
@@ -60,7 +61,8 @@ const LoginUser = () => {
 
   return (
     <>
-      <form action="" onSubmit={handleSubmit} className="form-register">
+      <Navbar />
+      <form action="" onSubmit={handleSubmit} className="formRegister">
         <h2>Login Page</h2>
         <input type="text" name="email" placeholder="email" />
         <input type="text" name="password" placeholder="password" />

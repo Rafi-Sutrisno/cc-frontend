@@ -1,5 +1,6 @@
 import React from "react";
 import "./register.css";
+import Navbar from "../../components/navbar/navbar";
 
 const registerUser = () => {
   function handlefetch(name, email, notelp, pass) {
@@ -57,6 +58,7 @@ const registerUser = () => {
 
   return (
     <>
+      <Navbar />
       <form action="" onSubmit={handleSubmit} className="formRegister">
         <h2>Register Page</h2>
         <input type="text" name="name" placeholder="name" />
